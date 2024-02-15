@@ -31,7 +31,7 @@
             <li><a class="nav-link scrollto" href="#about">About Us</a></li>
             <li><a class="nav-link scrollto" href="#solutions">Solutions</a></li>
             <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-            <li><a class="getstarted scrollto" href="#"> Login </a></li>
+            <li><a class="getstarted scrollto" href="login.html"> Login </a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
@@ -50,7 +50,7 @@
             <div class="col-md-8">
               <div class="mb-4">
               <h3>Sign In</h3>
-              <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p>
+              <p class="mb-4">Unlock Your World with a Click: Login and Explore</p>
             </div>
             <form id="myForm" action="#" method="post">
               <div class="form-group first">
@@ -66,14 +66,6 @@
                 </div>
               </div>
               
-              <div class="d-flex mb-5 align-items-center">
-                <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
-                  <input type="checkbox" checked="checked"/>
-                  <div class="control__indicator"></div>
-                </label>
-                <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span> 
-              </div>
-
               <input type="submit" value="Log In" class="btn btn-block btn-primary">
               </div>
             </form>
@@ -179,7 +171,7 @@
     //regular expressions
 
 	var regExUserName = /^[a-zA-Z]+$/;
-	var regExPasword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d\S]{8,}$/;
+	var regExPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d\S]{8,}$/;
 
     //initialization
 	var userName = document.getElementById("username");
@@ -198,53 +190,44 @@
 				if (!value.trim()) {
                     document.getElementById(em).innerText = "User Name is required.";
                     document.getElementById(em).style.display = "block";
-                    this.style.border = "2px solid red";
-                    validName = false;
+                    validUserName = false;
                 } else if (!value.trim().match(regExUserName)) {
                     document.getElementById(em).innerText = "Invalid user name, please enter valid name.";
                     document.getElementById(em).style.display = "block";
-                    this.style.border = "2px solid red";
-                    validName = false;
+                    validUserName = false;
                 } else if (value.length < 2) {
                     document.getElementById(em).innerText = "First Name must be at least 2 characters long.";
                     document.getElementById(em).style.display = "block";
-                    this.style.border = "2px solid red";
-                    validName = false;
+                    validUserName = false;
                 } else if (value.length > 10) {
                     document.getElementById(em).innerText = "First Name must not exceed 10 characters.";
                     document.getElementById(em).style.display = "block";
-                    this.style.border = "2px solid red";
-                    validName = false;
+                    validUserName = false;
                 } else {
                     document.getElementById(em).style.display = "none";
                     this.style.border = "";
-                    validName = true;
+                    validUserName = true;
                 }
                 break;
                 case "password":
                 if (!value.trim()) {
                     document.getElementById(em).innerText = "Password is required.";
                     document.getElementById(em).style.display = "block";
-                   this.style.border = "2px solid red";
                    validPassword = false;
                 } else if (value.length < 8) {
-                    document.getElementById(em).innerText = "Password must be at least 8 characters long.";
+                    document.getElementById(em).innerText = "Password must be at least 8 characters long";
                     document.getElementById(em).style.display = "block";
-                    this.style.border = "2px solid red";
                     validPassword = false;
                 } else if (value.length > 20) {
                     document.getElementById(em).innerText = "Password must not exceed 20 characters.";
                     document.getElementById(em).style.display = "block";
-                    this.style.border = "2px solid red";
                     validPassword = false;
                 } else if (!value.trim().match(regExPassword)) {
                     document.getElementById(em).innerText = "Password must contain at least one uppercase letter, one lowercase letter, one digit, and can contain special characters.";
                     document.getElementById(em).style.display = "block";
-                    this.style.border = "2px solid red";
                     validPassword = false;
                 } else {
                      document.getElementById(em).style.display = "none";
-                     this.style.border = "";
                      validPassword = true;
                 }
             break;
