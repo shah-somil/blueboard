@@ -21,7 +21,7 @@
   
   #header .logo h1 a,
   #header .logo h1 a:hover {
-    color: #7a6960;
+    color: #035dff;
     text-decoration: none;
   }
   
@@ -65,7 +65,7 @@
     justify-content: space-between;
     padding: 10px 0 10px 30px;
     font-size: 15px;
-    color: #4e4039;
+    color: #393b4e;
     white-space: nowrap;
     transition: 0.3s;
   }
@@ -81,22 +81,23 @@
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
-    color: #eb5d1e;
+    color: #f7b53b;
   }
   
   .navbar .getstarted,
   .navbar .getstarted:focus {
-    background: #eb5d1e;
+    background: #f7b53b;
     color: #fff;
     padding: 10px 25px;
     margin-left: 30px;
     border-radius: 50px;
+    width: 90px;
   }
   
   .navbar .getstarted:hover,
   .navbar .getstarted:focus:hover {
     color: #fff;
-    background: #ee7843;
+    background: #f6a91c;
   }
   
   .navbar .dropdown ul {
@@ -131,7 +132,7 @@
   .navbar .dropdown ul a:hover,
   .navbar .dropdown ul .active:hover,
   .navbar .dropdown ul li:hover>a {
-    color: #eb5d1e;
+    color: #f7b53b;
   }
   
   .navbar .dropdown:hover>ul {
@@ -167,7 +168,7 @@
   * Mobile Navigation 
   */
   .mobile-nav-toggle {
-    color: #7a6960;
+    color: #035dff;
     font-size: 28px;
     cursor: pointer;
     display: none;
@@ -176,7 +177,7 @@
   }
   
   .mobile-nav-toggle.bi-x {
-    color: #fff;
+    color: #393b4f;
   }
   
   @media (max-width: 991px) {
@@ -202,18 +203,18 @@
   
   .navbar-mobile .mobile-nav-toggle {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 30px;
+    right: 20px;
   }
   
   .navbar-mobile ul {
     display: block;
     position: absolute;
-    top: 55px;
-    right: 15px;
-    bottom: 15px;
-    left: 15px;
-    padding: 10px 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 60px 20px;
     background-color: #fff;
     overflow-y: auto;
     transition: 0.3s;
@@ -223,18 +224,19 @@
   .navbar-mobile a:focus {
     padding: 10px 20px;
     font-size: 15px;
-    color: #7a6960;
   }
   
   .navbar-mobile a:hover,
   .navbar-mobile .active,
   .navbar-mobile li:hover>a {
-    color: #eb5d1e;
+    color: #f7b53b;
   }
   
   .navbar-mobile .getstarted,
   .navbar-mobile .getstarted:focus {
     margin: 15px;
+    /* bottom: 0px; */
+    /* position: absolute; */
   }
   
   .navbar-mobile .dropdown ul {
@@ -264,7 +266,7 @@
   .navbar-mobile .dropdown ul a:hover,
   .navbar-mobile .dropdown ul .active:hover,
   .navbar-mobile .dropdown ul li:hover>a {
-    color: #eb5d1e;
+    color: #f7b53b;
   }
   
   .navbar-mobile .dropdown>.dropdown-active {
