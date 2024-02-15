@@ -36,15 +36,6 @@ To get started with Blue Board:
 
 For more information or to request a demo, reach out through our Contact Us section.
 
-## Contact Us
-
-For support or inquiries, contact us at:
-
-- Email: info@blueboard.com
-- Phone: +1 857 123 4567
-
-Join us in revolutionizing project management with Blue Board.
-
 ## Team Members
 
 - Charmy Darji - darji.c@northeastern.edu
