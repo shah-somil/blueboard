@@ -552,6 +552,71 @@ section {
 }
 
 
+#solutions{
+  background-color: #EBF2FF;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+
+#custCarousel .carousel-indicators {
+  position: static;
+  margin-top:20px;
+  padding-bottom: 140px;
+}
+
+.carousel-indicators{
+  justify-content: space-evenly;
+}
+
+#custCarousel .carousel-indicators > li {
+width:100px;
+}
+
+.carousel-indicators li{
+  background-color: unset;
+}
+
+.carousel-indicators .active{
+  background-color: unset;
+}
+
+#custCarousel .carousel-indicators li img {
+  display: block;
+  opacity: 0.5;
+  border-radius: 20%;
+  height: 60px;
+  padding-bottom: 10px;
+}
+
+#custCarousel .carousel-indicators li.active img {opacity: 1;transform: scale(1.1);}
+
+
+#custCarousel .carousel-indicators li:hover img {
+opacity: 0.75;
+}
+
+#custCarousel .carousel-indicators li span {
+  opacity: 0.5;
+  font-size: 14px;
+}
+
+#custCarousel .carousel-indicators li.active span {
+  opacity: 1;
+  font-weight: 500;
+  /* font-size: 14px; */
+}
+
+
+#custCarousel .carousel-indicators li:hover span {
+opacity: 0.75;
+}
+
+
+.carousel-item img{width:80%;}
+
 
   /*--------------------------------------------------------------
 # Footer
