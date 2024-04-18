@@ -869,3 +869,43 @@ opacity: 0.75;
     padding: 3px 0;
   }
 }
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.card-img-top {
+  width: 100%;
+  border-top-left-radius: calc(.25rem - 1px);
+  border-top-right-radius: calc(.25rem - 1px);
+  border-radius: 20px;
+}
+
+.services .title {
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 19px;
+  margin-top: 15px;
+}
+
+.services .icon-box {
+  padding: 14px;
+}
+a {
+  color: black;
+}
+
+.services .description {
+  font-size: 15px;
+  line-height: 20px;
+  margin-bottom: 0;
+}
+
+.h3, h3 {
+  font-size: 1.9rem;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 55px;
+}
+
