@@ -7,6 +7,15 @@ import nodemailer from "nodemailer";
 import handlebars from "handlebars";
 import { readFileSync } from "fs";
 import { join, dirname } from "path";
+// require('dotenv').config();
+
+var CLIENT_URL = "localhost:3001"
+var EMAIL_FROM = "me@somil.in"
+var EMAIL_HOST = "smtp.hostinger.com"
+var EMAIL_PORT = "465"
+var EMAIL_PASSWORD="Somil@me786!"
+var EMAIL_USERNAME = "me@somil.in"
+
 /* Function for  authenticating a user */
 export const authenticateUser = async (req, res) => {
   try {
@@ -83,7 +92,7 @@ export const requestPasswordReset = async (email) => {
     createdAt: Date.now(),
   }).save();
 
-  const link = `${process.env.CLIENT_URL}/reset-password?token=${resetToken}&id=${user._id}`;
+  const link = `${CLIENT_URL}/reset-password?token=${resetToken}&id=${user._id}`;
 
   await sendEmail(
     user.email,
@@ -141,19 +150,22 @@ export const resetPassword = async (userId, token, password) => {
 
 const sendEmail = async (email, subject, payload, template) => {
   try {
-    console.log("email", process.env.EMAIL_HOST);
-    console.log("email", process.env.EMAIL_USERNAME);
-    console.log("email", process.env.EMAIL_PASSWORD);
-    console.log("email", process.env.EMAIL_FROM);
+    // Log configurations for debugging
+    console.log("Email Configuration:", {
+      host: EMAIL_HOST,
+      user: EMAIL_USERNAME,
+      pass: EMAIL_PASSWORD,
+      from: EMAIL_FROM
+    });
     // create reusable transporter object using the default SMTP transport
     const transporter = nodemailer.createTransport({
-      host: process.env.EMAIL_HOST,
+      host: EMAIL_HOST,
       port: 465,
       secure: true,
       debug: true,
       auth: {
-        user: process.env.EMAIL_USERNAME,
-        pass: process.env.EMAIL_PASSWORD,
+        user: EMAIL_USERNAME,
+        pass: EMAIL_PASSWORD,
       },
     });
 
@@ -166,7 +178,7 @@ const sendEmail = async (email, subject, payload, template) => {
 
     const options = () => {
       return {
-        from: process.env.EMAIL_FROM,
+        from: EMAIL_FROM,
         to: email,
         subject: subject,
         html: compiledTemplate(payload),
