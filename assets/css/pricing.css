@@ -1,0 +1,199 @@
+/* Pricing Section */
+.pricing {
+    padding: 120px 0 60px 0;
+    background: #f8f8f8;
+  }
+  
+  .section-title {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  
+  .pricing .section-title h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .pricing .section-title p {
+    margin-bottom: 0;
+  }
+  
+  .pricing .box {
+    box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+    padding: 40px 20px;
+    margin-bottom: 20px;
+    background: #fff;
+    text-align: center;
+  }
+  
+  .pricing .box h3 {
+    font-weight: 600;
+    margin: 10px 0;
+    font-size: 22px;
+    color: #055eda;
+  }
+  
+  .pricing .box h4 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    color: #0d6efd;
+  }
+  
+  .pricing .box ul {
+    padding: 0;
+    list-style: none;
+    color: #0a0a0a;
+    text-align: center;
+    line-height: 20px;
+  }
+  
+  .pricing .box ul li {
+    padding-bottom: 16px;
+  }
+  
+  .pricing .box .btn-buy {
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 50px;
+    color: #fff;
+    background: #106eea;
+    transition: all 0.4s;
+    margin-top: 15px;
+  }
+  
+  .pricing .box .btn-buy:hover {
+    background: #0d5de1;
+  }
+  
+  .recommended {
+    position: relative;
+  }
+  
+  .recommended-badge {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background: #f8a70a;
+    color: #fff;
+    padding: 5px 15px;
+    font-size: 14px;
+    border-radius: 50px;
+    box-shadow: 0 2px 20px 0 rgba(240, 146, 53, 0.5);
+  }
+  
+  /* Responsive for small devices */
+  @media (max-width: 992px) {
+    .pricing .box {
+      margin-bottom: 30px;
+    }
+  }
+  
+  /* Responsive for very small devices */
+  @media (max-width: 576px) {
+    .pricing .box {
+      padding: 20px 10px;
+    }
+  }
+  
+ /* F.A.Q Section */
+.faq {
+    padding: 60px 0;
+    background: #fff;
+  }
+  
+  .faq .section-title {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  
+  .faq .section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #055eda;
+  }
+  
+  .faq .section-title p {
+    margin-bottom: 0;
+    font-size: 15px;
+    color: #6c757d;
+  }
+  
+  .faq-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .faq-list li {
+    padding: 20px;
+    background: #f7f7f7;
+    margin-bottom: 20px;
+    border-radius: 4px;
+  }
+  
+  .faq-list li:nth-child(even) {
+    background: #eef0f2;
+  }
+  
+  .faq-list a {
+    display: block;
+    position: relative;
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #0652dd;
+    cursor: pointer;
+  }
+  
+  .faq-list i {
+    margin-right: 10px;
+  }
+  
+  .faq-list p {
+    margin-bottom: 0;
+    padding-top: 10px;
+  }
+  
+  .icon-help {
+    font-size: 22px;
+    color: #055eda;
+  }
+  
+  .faq .collapse {
+    margin-top: 5px;
+  }
+  
+  .faq .collapse.show {
+    color: #495057;
+  }
+  
+  .icon-show, .icon-close {
+    float: right;
+    line-height: 18px;
+  }
+  
+  .icon-show {
+    display: none;
+  }
+  
+  .faq-list a.collapsed .icon-show {
+    display: inline-block;
+  }
+  
+  .faq-list a.collapsed .icon-close {
+    display: none;
+  }
+  
+  .faq-list a .icon-close {
+    display: inline-block;
+  }
+  
+  @media (max-width: 992px) {
+    .faq-list a {
+      font-size: 16px;
+    }
+  }
+  
