@@ -346,8 +346,18 @@ const EditWorkItemModel = (props: Props) => {
         lastUpdatedAt: new Date(),
         title,
         description,
+        // assignees: selectedAssignees.map((assignee: any) => assignee.value),
+        assignees: selectedAssignees?.map((assignee: any) => assignee?.value ?? "") ?? [],
+        status: selectedStatus[0].value,
+        priority: selectedPriority[0].value,
+        type: selectedType[0].value,
+        // type: "bug",
+        ownerId: selectedReporter[0].value,
+        comments: storeComments,
+        tasks: storeTasks,
       })
     );
+    window.location.reload();
     onClose();
   };
 
@@ -470,16 +480,12 @@ const EditWorkItemModel = (props: Props) => {
         <>
           <div className="my-4 flex flex-row justify-between items-start">
             <p className="text-base font-semibold flex flex-row gap-2 items-center">
-              {workItem?.workitemId?.toLowerCase().includes("story") ? (
-                <FaCheckSquare fill="#4BADE8" size={20} />
-              ) : null}
-              {workItem?.workitemId?.toLowerCase().includes("feature") ? (
-                <FaBookmark fill="#65ba43" size={20} />
-              ) : null}
-              {workItem?.workitemId?.toLowerCase().includes("bug") ? (
-                <FaExclamationCircle fill="#e44d42" size={20} />
-              ) : null}
-              {workItem?.workitemId}
+              {workItem?.type === "story" ? <FaCheckSquare fill="#4BADE8" size={13} /> : null}
+              {workItem?.type === "feature" ? <FaBookmark fill="#65ba43" size={13} /> : null}
+              {workItem?.type === "bug" ? <FaExclamationCircle fill="#e44d42" size={13} /> : null}
+              {workItem?.type?.toLocaleUpperCase() ?? ""}
+              {"-"}
+              {workItem?.workitemId?.split("-")[1] ?? ""}
             </p>
             <div className="flex flex-row gap-4 justify-evenly items-center">
               {workItem && workItem?.tasks?.length === 0 ? (

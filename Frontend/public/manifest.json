@@ -1,7 +1,7 @@
 {
 
-  "short_name": "WorkWise",
-  "name": "WorkWise Project Management Tool",
+  "short_name": "blueboard",
+  "name": "blueboard Project Management Tool",
 
   "icons": [
     {
@@ -24,13 +24,13 @@
       "type": "image/svg+xml"
     },
     {
-      "src": "assets/workwise_large.png",
+      "src": "assets/blueboard_large.png",
       "type": "image/png", 
       "sizes": "sizeXsize" 
     },
     
     {
-      "src": "assets/workwise.png",
+      "src": "assets/blueboard.png",
       "type": "image/png", 
       "sizes": "sizeXsize" 
     },

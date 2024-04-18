@@ -1,5 +1,5 @@
 // Cache Name for the Service Worker
-const cacheName = "workwise-cache-v1";
+const cacheName = "blueboard-cache-v1";
 
 // Files to be cached in the service worker
 const filesToCache = [
@@ -11,9 +11,9 @@ const filesToCache = [
   "/manifest.json",
   "/assets/default_project.svg",
   "/assets/features.svg",
-  "/assets/workwise_large.png",
-  "/assets/workwise_logo.png",
-  "/assets/workwise.png",
+  "/assets/blueboard_large.png",
+  "/assets/blueboard_logo.png",
+  "/assets/blueboard.png",
   "/logo_large.png",
   "/logo_small.png",
   "/public/manifest.json",
