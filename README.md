@@ -1,5 +1,5 @@
 # Blue Board
-![Project Image](assets/img/logo-fullwidth.png)
+![Project Image](Frontent/src/assets/img/logo-fullwidth.png)
 ## Introduction
 
 Blue Board is a comprehensive project management platform designed to enhance team collaboration and project tracking. With an emphasis on user-friendly design and functionality, Blue Board integrates various web technologies to provide a seamless experience for managing tasks, schedules, and communications.
