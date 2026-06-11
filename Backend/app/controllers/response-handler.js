@@ -4,9 +4,10 @@ export const setResponse = (data, response) => {
 };
 // setErrorResponse: 500 Response handler for the API
 export const setErrorResponse = (error, response = false) => {
+  console.error("API Error occurred:", error);
   response.status(500).json({
     status: "error",
-    message: error,
+    message: error.message || error,
   });
 };
 // setNotFoundResponse: 404 Response handler for the API

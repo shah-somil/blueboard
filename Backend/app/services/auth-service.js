@@ -9,12 +9,12 @@ import { readFileSync } from "fs";
 import { join, dirname } from "path";
 // require('dotenv').config();
 
-var CLIENT_URL = "localhost:3001"
-var EMAIL_FROM = "me@somil.in"
-var EMAIL_HOST = "smtp.hostinger.com"
-var EMAIL_PORT = "465"
-var EMAIL_PASSWORD="Somil@me786!"
-var EMAIL_USERNAME = "me@somil.in"
+const CLIENT_URL = process.env.CLIENT_URL || "http://localhost:3001";
+const EMAIL_FROM = process.env.EMAIL_FROM || "me@somil.in";
+const EMAIL_HOST = process.env.EMAIL_HOST || "smtp.hostinger.com";
+const EMAIL_PORT = process.env.EMAIL_PORT || "465";
+const EMAIL_PASSWORD = process.env.EMAIL_PASSWORD || "Somil@me786!";
+const EMAIL_USERNAME = process.env.EMAIL_USERNAME || "me@somil.in";
 
 /* Function for  authenticating a user */
 export const authenticateUser = async (req, res) => {
@@ -157,11 +157,12 @@ const sendEmail = async (email, subject, payload, template) => {
       pass: EMAIL_PASSWORD,
       from: EMAIL_FROM
     });
+    const isSecure = EMAIL_PORT === "465";
     // create reusable transporter object using the default SMTP transport
     const transporter = nodemailer.createTransport({
       host: EMAIL_HOST,
-      port: 465,
-      secure: true,
+      port: Number(EMAIL_PORT),
+      secure: isSecure,
       debug: true,
       auth: {
         user: EMAIL_USERNAME,
