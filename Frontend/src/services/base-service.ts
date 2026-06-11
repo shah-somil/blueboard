@@ -1,4 +1,4 @@
-const baseURL = "http://localhost:3000/api";
+const baseURL = process.env.REACT_APP_API_URL || "http://localhost:3000/api";
 
 // Function to handle HTTP PUT requests for updating data
 export const update = async <T>(path: string, data: T): Promise<T> => {
